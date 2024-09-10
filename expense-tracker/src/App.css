@@ -1,0 +1,403 @@
+/* Custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+:root {
+  --primary-color: #3498db; /* Blue */
+  --secondary-color: #2ecc71; /* Green */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  /* background-color: #6A9C89; */
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Navbar Styles */
+.navbar {
+  background-color: #343a40;
+}
+
+.LogoImg{
+  height: 60px;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #d1d1d1;
+}
+
+.card-body{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  height: 100%;
+ /* background-color: #E9EFEC; */
+  /* padding: 1rem; */
+}
+
+/* Card Styles */
+.card {
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #5a6268;
+}
+
+/* Input and Select Styles */
+.form-control, .form-select {
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Alert Styles */
+.alert {
+  border-radius: 0.5rem;
+}
+
+/* Custom Animations */
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.col-md-4{
+  width: 50%;
+}
+
+
+.col-md-4 img{
+  border-radius: 15px;
+
+  width: 100%;
+  height: 250px;
+}
+
+.col-md-8{
+  width: 50%;
+}
+
+
+.FilteredList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.shadow-sm{
+  width: 48%;
+  margin: 1%;
+}
+
+.pieChart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pieChart div{
+  width: 35%;
+}
+
+@media  screen and (max-width: 992px) {
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col-md-4,.col-md-8{
+    width: 100%;
+    height: 50%;
+  }
+
+  .col-md-8{
+    padding-top: 1rem;
+  }
+  .pieChart div{
+    width: 50%;
+  }
+}
+
+@media  screen and (max-width: 768px) {
+  .pieChart div{
+    width: 70%;
+  }
+  /* .navbar{
+    display: static;
+  } */
+  .LogoImg{
+    height: 46px;
+  }
+}
+
+@media  screen and (max-width: 500px) {
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shadow-sm{
+    width: 100%;
+  }
+
+  .col-md-4,.col-md-8{
+    width: 100%;
+    height: 50%;
+  }
+
+  .col-md-8{
+    padding-top: 1rem;
+  }
+
+  .pieChart div{
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* Navbar Styles */
+.navbar {
+  background-color: #343a40;
+  position: fixed;  /* Make the navbar fixed */
+  top: 0;  /* Align to the top */
+  left: 0;  /* Align to the left */
+  width: 100%;  /* Ensure the navbar spans the full width of the viewport */
+  z-index: 1000;  /* Ensure the navbar stays on top of other elements */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Optional: Add shadow for visual separation */
+}
+
+/* Adjust body padding to prevent content overlap with fixed navbar */
+body {
+  padding-top: 70px;  /* Adjust this value based on the navbar height */
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #d1d1d1;
+}
+
+/* Add margin to the nav items for spacing */
+.nav-item {
+  margin: 5px;
+}
+
+
+
+/* Custom Button Styles */
+/* From Uiverse.io by Randdose */ 
+
+.nav-item{
+  margin: 5px;
+
+}
+/* From Uiverse.io by nikk7007 */ 
+.button {
+  --color: #00A97F;
+  /* padding: 0.8em 1.7em; */
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+ }
+ 
+ .button::before, .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .button:hover {
+  color: rgb(10, 25, 30);
+ }
+ 
+ .button:active {
+  filter: brightness(.8);
+ }
+ 
+
+ /* Navbar Styles */
+.navbar {
+  background-color: #343a40;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #ffffff;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #d1d1d1;
+}
+
+/* Toggler Styles */
+.nav-toggler {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+}
+
+.nav-toggler span {
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-toggler {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #343a40;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .nav-menu li {
+    text-align: center;
+  }
+
+  .nav-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
+
+  /* Toggler Animation */
+  .nav-toggle:checked + .nav-toggler span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .nav-toggle:checked + .nav-toggler span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle:checked + .nav-toggler span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* Hide checkbox */
+.nav-toggle {
+  display: none;
+}
